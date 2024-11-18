@@ -1,0 +1,90 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro Display", sans-serif;
+  color: white;
+}
+
+
+.project-container {
+  width: 90%;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.project-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.img-container {
+  box-sizing: border-box;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  background-color: #3f3f3f;
+  border-radius: 20px;
+  border: 1px solid grey;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-container img {
+  width: 80%;
+  height: auto;
+}
+
+.text-info-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.text-info-container h2 {
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.text-info-container p {
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.underline {
+  margin: 50px auto;
+  height: 1px;
+  width: 90%;
+  background-color: #979797;
+}
+
+.extra-info-container {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+.extra-info-container p {
+  font-weight: 300;
+  font-size: 20px;
+  color: #B0B0B0;
+}
+
+@media screen and (max-width: 1000px) {
+  .project-grid-container {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: none;
+  }
+
+  .text-info-container {
+    height: fit-content;
+  }
+
+}

@@ -5,3 +5,33 @@ body {
   font-family: "SF Pro Display", sans-serif;
   color: white;
 }
+
+.about-me-text-container {
+  width: 90%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.about-me-text-container p {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.about-me-text-container span {
+  color: #CE0F0F;
+  font-weight: 600;
+}
+
+.mn-logo-container {
+  max-width: 500px;
+  width: 70%;
+  height: fit-content;
+  margin: 100px auto;
+}
+.mn-logo-container img {
+  width: 100%;
+  height: auto;
+}
