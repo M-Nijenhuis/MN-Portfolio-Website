@@ -31,6 +31,9 @@
   color: #CE0F0F;
   text-decoration: underline;
 }
+.footer-info-container a:hover {
+  color: #7E0707;
+}
 
 .footer-info-container > div {
   width: 90%;

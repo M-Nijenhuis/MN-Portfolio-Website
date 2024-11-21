@@ -1,0 +1,120 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro Display", sans-serif;
+  color: white;
+}
+
+.profiles-container {
+  max-width: 850px;
+  width: 100%;
+  height: fit-content;
+  margin: 250px auto;
+}
+
+.black-box {
+  background-color: black;
+  box-sizing: border-box;
+  border: 1px solid #979797;
+  border-radius: 15px;
+}
+
+.text-container {
+  width: 80%;
+  margin: 200px auto;
+  text-align: center;
+}
+
+.text-container p {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.info-container {
+  max-width: 850px;
+  width: 100%;
+  min-height: 375px;
+  box-sizing: border-box;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-container p {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.info-container a {
+  color: #ce0f0f;
+}
+
+.info-container a:hover {
+  color: #7e0707;
+}
+
+.flex-row-container {
+  max-width: 850px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+}
+
+.linkedin-container {
+  max-width: 375px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.linkedin-container img {
+  width: 100%;
+  height: auto;
+}
+
+.github-container {
+  max-width: 375px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.github-container img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 880px) {
+  .text-container p {
+    font-size: 30px;
+  }
+
+
+  .flex-row-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .profiles-container p { */
+  /*   font-size: clamp(5px 1vw 15px); */
+  /* } */
+
+  .info-container {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  .info-container p {
+    font-size: clamp(22px, 2vw, 28px);
+    white-space: nowrap;
+  }
+}
