@@ -27,7 +27,7 @@ body {
 }
 
 .text-container p {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
 }
 
@@ -99,8 +99,12 @@ body {
     margin-top: 100px;
   }
 
+  .text-container {
+    margin: 100px auto;
+  }
+
   .text-container p {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .linkedin-container, .github-container {

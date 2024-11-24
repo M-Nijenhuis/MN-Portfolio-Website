@@ -95,7 +95,7 @@
   border-top: 1px solid #9B9B9B;
 }
 .phone-footer-container p {
-  font-size: clamp(15px, 4vw, 30px);
+  font-size: clamp(12px, 4vw, 30px);
   font-weight: 500;
   margin: 0 10px;
 }

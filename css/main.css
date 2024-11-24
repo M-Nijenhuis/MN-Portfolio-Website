@@ -141,7 +141,7 @@ body {
   height: 1px;
   width: 80%;
   background-color: grey;
-  margin: 50px auto;
+  margin: 120px auto;
 }
 
 .project-images-container {
@@ -162,6 +162,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .image-container {
@@ -184,6 +185,11 @@ body {
   height: auto;
 }
 
+.todo-container {
+  background-color: #212121;
+  padding: 10px 40px;
+}
+
 .project-1-container p {
   font-size: 30px;
   font-weight: 500;
@@ -196,7 +202,10 @@ body {
   flex-direction: row-reverse;
   font-size: 30px;
   font-weight: 500;
-  margin-right: 20px;
+}
+
+.project-2-container p {
+    margin-right: 20px;
 }
 
 .meer-zien {
@@ -213,8 +222,8 @@ body {
   .project-1-container p {
     margin-left: 0;
   }
-  .project-2-container {
-    margin: 0;
+  .project-2-container p {
+    margin-right: 0;
   }
 
   .image-container {
