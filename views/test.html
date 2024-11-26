@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Horizontal Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .scroll-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none; /* For Firefox */
+      -ms-overflow-style: none; /* For Internet Explorer */
+    }
+    .scroll-container::-webkit-scrollbar {
+      display: none; /* For Chrome, Safari, and Edge */
+    }
+    .scroll-item {
+      flex: 0 0 33.33%;
+      height: 100vh;
+      scroll-snap-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+    .scroll-item:nth-child(odd) {
+      background-color: teal;
+    }
+    .scroll-item:nth-child(even) {
+      background-color: tomato;
+    }
+  </style>
+</head>
+<body>
+  <div id="infinite-scroll" class="scroll-container">
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+  </div>
+  <script>
+    const container = document.getElementById('infinite-scroll');
+    const items = [];
+    const numDivs = 5;
+
+    // Create and append divs dynamically
+    for (let i = 1; i <= numDivs; i++) {
+      const div = document.createElement('div');
+      div.className = 'scroll-item';
+      div.textContent = `Div ${i}`;
+      items.push(div);
+    }
+
+    // Clone items to make infinite scrolling
+    function setupInfiniteScroll() {
+      items.forEach(item => container.appendChild(item.cloneNode(true)));
+      items.forEach(item => container.appendChild(item.cloneNode(true)));
+    }
+    setupInfiniteScroll();
+
+    // Sync scrolling to create infinite effect
+    container.addEventListener('scroll', () => {
+      const scrollLeft = container.scrollLeft;
+      const totalWidth = container.scrollWidth;
+      const visibleWidth = container.clientWidth;
+
+      if (scrollLeft === 0) {
+        // Snap to the second set of divs when at start
+        container.scrollLeft = totalWidth / 3;
+      } else if (scrollLeft + visibleWidth >= totalWidth) {
+        // Snap to the middle set of divs when at end
+        container.scrollLeft = totalWidth / 3 - visibleWidth;
+      }
+    });
+
+    // Start scrolling in the middle set of divs
+    setTimeout(() => {
+      container.scrollLeft = container.scrollWidth / 3;
+    }, 0);
+  </script>
+</body>
+</html>
