@@ -7,7 +7,7 @@
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/hack" rel="stylesheet" />
   <title>Michiel Nijenhuis</title>
-  <link rel="icon" type="image/x-icon" href="../images/MN_logo.png">
+
   <link href="../css/main.css" rel="stylesheet" />
   <link href="../css/nav-bar.css" rel="stylesheet" />
   <link href="../css/footer.css" rel="stylesheet" />
@@ -19,19 +19,19 @@
   <nav>
     <div class="sidebar">
       <a class="close-icon" href="#" onclick="CloseSidebar()"><img src="../images/CloseIcon.png" alt="MN logo" /></a>
-      <a class="active-tab" href="index.html">HOME</a>
-      <a href="about-me.html">OVER MIJ</a>
-      <a href="projects.html">PROJECTEN</a>
-      <a href="contact.html">CONTACT</a>
+      <a class="nav-link active-tab" href="index.html">HOME</a>
+      <a class="nav-link" href="about-me.html">OVER MIJ</a>
+      <a class="nav-link" href="projects.html">PROJECTEN</a>
+      <a class="nav-link" href="contact.html">CONTACT</a>
     </div>
 
     <div>
       <a class="MN-logo-navbar" href="index.html"><img src="../images/MN_logo.png" alt="MN logo" /></a>
-      <a class="active-tab hide-on-mobile" href="index.html">HOME</a>
-      <a class="hide-on-mobile" href="about-me.html">OVER MIJ</a>
-      <a class="hide-on-mobile" href="projects.html">PROJECTEN</a>
-      <a class="hide-on-mobile" href="contact.html">CONTACT</a>
-      <a class="menu-icon" onclick="OpenSidebar()"><img src="../images/HamburgerIcon.png" alt=""></a>
+      <a class="nav-link active-tab hide-on-mobile" href="index.html">HOME</a>
+      <a class="nav-link hide-on-mobile" href="about-me.html">OVER MIJ</a>
+      <a class="nav-link hide-on-mobile" href="projects.html">PROJECTEN</a>
+      <a class="nav-link hide-on-mobile" href="contact.html">CONTACT</a>
+      <a class="nav-link menu-icon" onclick="OpenSidebar()"><img src="../images/HamburgerIcon.png" alt=""></a>
     </div>
   </nav>
 
@@ -86,8 +86,8 @@
 
   <footer>
     <div class="flex-container">
-      <img src="../images/github-icon-2.svg" alt="">
-      <img src="../images/linkedin-app-white-icon.webp" alt="github logo">
+      <a href="https://github.com/m-nijenhuis" target="_blank"><img src="../images/github-icon-2.svg" alt="github logo"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="../images/linkedin-app-white-icon.webp" alt="linkedin logo"></a>
     </div>
     <p>©Michiel Nijenhuis</p>
   </footer>
@@ -95,6 +95,7 @@
 
   <script src="../javascript/index.js"></script>
   <script src="../javascript/sidebar.js"></script>
+  <script src="../javascript/navbarHover.js"></script>
 </body>
 
 </html

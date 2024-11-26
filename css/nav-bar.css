@@ -24,7 +24,7 @@ nav div {
   align-items: center;
 }
 
-nav div a {
+.nav-link, nav div a {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
@@ -32,10 +32,11 @@ nav div a {
   cursor: pointer;
   padding: 0 35px;
   margin: auto 0;
+  transition: opacity 300ms ease;
 }
 
-nav div a:hover {
-  color: grey;
+#not-change {
+  opacity: 1;
 }
 
 .active-tab {
