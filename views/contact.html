@@ -8,6 +8,7 @@
   <title>CONTACT</title>
   <link href="../css/nav-bar.css" rel="stylesheet" />
   <link href="../css/contact.css" rel="stylesheet" />
+  <link href="../css/footer.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -30,37 +31,43 @@
     </div>
   </nav>
 
-  <div class="text-container">
-    <p>
-      In deze website laat ik zien wat ik kan en hoeveel passie ik voor programmeren heb. Ik ben momenteel gewoon bezig
-      met mijn opleiding software developer, maar als u dit ziet en u wilt mij misschien als stagair dan mag u natuurlijk altijd contact opnemen.
-      Hebt u interesse in mijn werk of wilt u meer weten? Neem dan gerust contact op.
-    </p>
+
+  <div class="content-container">
+    <div class="left-container">
+      <div class="text-container">
+        <p>Ik vind het super leuk dat je mijn portfolio hebt bekeken. Als je misschien contact op wil nemen kan dat natuurlijk. Ik hoor graag van je.</p> 
+        <div class="grey-breakline"></div> 
+        <p>Contact je liever via de mail?</p>
+        <a href="mailto:contact@michielnijenhuis.com">contact@michielnijenhuis.com</a>
+      </div>
+
+    </div> 
+    <form class="inputs-container" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="de08dff7-641a-4623-9b73-a9cf3ab34b31">
+      <p class="input-title">Naam</p> 
+      <input type="text" name="naam" value="" placeholder="Je naam" required>
+      <p class="input-title">Email</p> 
+      <input type="email" name="email" value="" placeholder="jouw@email.com" required>
+      <p class="input-title">Bericht</p> 
+      <textarea name="message" placeholder="Schrijf hier je bericht" required></textarea>
+
+      <button class="btn" type="submit">Stuur je bericht</button>
+    </form>
   </div>
 
-  <div class="profiles-container">
-    <div class="black-box info-container">
-      <div class="location-info">
-        <p>De Wieren 16</p>
-        <p>9866 AK Lutjegast</p>
-      </div>
-      <div class="contact-info">
-        <p>T: <a href="tel:+31657167632">06 57 16 76 32</a></p>
-        <p>E: <a href="mailto:Michielmitsjol@gmail.com">Michielmitsjol@gmail.com</a></p>
-      </div>
+
+  <footer>
+    <div class="flex-container">
+      <a href="https://github.com/m-nijenhuis" target="_blank"><img src="../images/github-icon-2.svg" alt="github logo"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="../images/linkedin-app-white-icon.webp" alt="linkedin logo"></a>
     </div>
-    <div class="flex-row-container">
-      <div class="black-box linkedin-container">
-        <a href="https://www.linkedin.com" target="_blank"><img src="../images/Linked-logo-png.webp" alt="linked logo" /></a>
-      </div>
-      <div class="black-box github-container">
-        <a href="https://github.com/M-Nijenhuis" target="_blank"><img src="../images/github-logo-png.png" alt="linked logo" /></a>
-      </div>
-    </div>
-  </div>
+    <p>©Michiel Nijenhuis</p>
+  </footer>
+
 
   <script src="../javascript/sidebar.js"></script>
   <script src="../javascript/navbarHover.js"></script>
+  <script src="../javascript/textareaHeight.js"></script>
 </body>
 
 </html>
