@@ -41,6 +41,7 @@ body {
 }
 
 .grey-breakline {
+  margin-left: 20px;
   width: 80%;
   height: 1px;
   background-color: #979797;
@@ -131,4 +132,14 @@ body {
   .inputs-container {
     width: 100%;
   }
+
+  .text-container {
+    font-size: 25px;
+  }
+
+  .text-container p:last-of-type, a {
+    font-size: 20px;
+  }
+
+
 }

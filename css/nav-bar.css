@@ -67,6 +67,9 @@ nav div a:first-child {
   animation-duration: 0.7s;
   animation-iteration-count: 1;
 }
+.sidebar a img {
+  opacity: 1;
+}
 
 @keyframes sidebarOpen {
   0% {right: -400px;}
