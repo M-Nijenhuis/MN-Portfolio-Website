@@ -8,7 +8,6 @@ function addAnimation() {
   scrollers.forEach(scroller  => {
     scroller.setAttribute('data-animated', true);
 
-
     const scrollerInner = scroller.querySelector(".scroller-inner");
     const scrollerContect = Array.from(scrollerInner.children);
 

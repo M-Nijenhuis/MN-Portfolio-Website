@@ -1,12 +1,12 @@
-// Selecteer alle <link> tags met rel="stylesheet"
+// Select all links in html with the rel="stylesheet"
 const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
 
-// Loop door alle gevonden <link> tags
+// loop true all found links
 cssLinks.forEach(link => {
-  // Controleer of de href een CSS-bestand is
+  // checks if the href is a css file
   if (link.href.endsWith('.css')) {
-    const currentTime = new Date().getTime(); // Huidige tijd in milliseconden
-    // Update het href-attribuut met een querystring
+    const currentTime = new Date().getTime();
+    // update the href atribute with the string
     link.href = `${link.href.split('?')[0]}?v=${currentTime}`;
   }
 });

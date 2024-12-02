@@ -36,8 +36,10 @@ function typeEffect() {
   }
 }
 
+// Wait 1 second
 setTimeout(typeEffect, 1000);
 
+// Gets the current time for dispaying in index.html
 function GetCurrentTime() {
   const now = new Date();
   const hours = now.getHours().toString().padStart(2, "0");

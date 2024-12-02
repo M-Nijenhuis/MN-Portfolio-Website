@@ -2,6 +2,7 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 function navHover() {
 
+  //If the window is bigger than 1000px than execute the code
   if (window.innerWidth > 1000) {
 
     navLinks.forEach((link) => {

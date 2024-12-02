@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const textareas = document.querySelectorAll("textarea");
 
   textareas.forEach((textarea) => {
-    textarea.style.height = textarea.scrollHeight + "px"; // Stel initiële hoogte in
+    //textarea.style.height = textarea.scrollHeight + "px";
+    textarea.style.height = "80px";
     textarea.addEventListener("input", (event) => {
-      textarea.style.height = "auto"; // Reset hoogte
-      textarea.style.height = textarea.scrollHeight + "px"; // Pas aan aan inhoud
+      // if there is input then the height style is set to auto + the content
+      textarea.style.height = "auto";
+      textarea.style.height = textarea.scrollHeight + "px";
     });
   });
 });

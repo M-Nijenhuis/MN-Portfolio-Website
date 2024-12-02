@@ -1,8 +1,9 @@
 const footer = document.querySelector(".one-page-footer");
 
+// This function checkes if you can scroll in the page or not
 function checkIfScrollingIsNeeded() {
-  const viewportHeight = window.innerHeight; // Zichtbare hoogte
-  const contentHeight = document.documentElement.scrollHeight; // Totale inhoudshoogte
+  const viewportHeight = window.innerHeight;
+  const contentHeight = document.documentElement.scrollHeight;
 
   if(!footer) {
     console.warn("Er is geen footer aangewezen!");
@@ -24,21 +25,17 @@ function checkIfScrollingIsNeeded() {
   }
 }
 
-// Roep de functie aan
-checkIfScrollingIsNeeded();
-
-// Live checken bij resize en DOM veranderingen
+// This function checks if the page changes width and if it does it calls the check if scrolling needed function
 function observeChanges() {
-  // Check bij paginalaad
+  // Calls the function on the beginning of the load
   checkIfScrollingIsNeeded();
 
-  // Check bij vensterresizing
+  // checks if the window gets rezized
   window.addEventListener('resize', checkIfScrollingIsNeeded);
 
-  // Gebruik een MutationObserver voor DOM-wijzigingen
+  // uses a MutationObserver for DOM-changes
   const observer = new MutationObserver(checkIfScrollingIsNeeded);
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-// Start de observer
 observeChanges();
