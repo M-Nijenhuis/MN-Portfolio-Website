@@ -9,7 +9,7 @@ body {
 
 .about-me-text-container {
   width: 60%;
-  margin: 100px auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,11 +90,21 @@ body {
   .about-me-text-container p {
     font-size: 20px;
   }
+
+  .grey-breakline {
+    margin: 50px auto;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .scroll-item {
-    height: 200px;
+    height: 150px;
+    padding: 20px;
+  }
+
+
+  .about-me-text-container {
+    width: 90%;
   }
 }
 

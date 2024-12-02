@@ -1,17 +1,26 @@
 const navLinks = document.querySelectorAll(".nav-link");
 
-navLinks.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    navLinks.forEach(otherLink => {
-      otherLink.style.opacity = .5;
-    });
-    link.style.opacity = 1;
-  });
+function navHover() {
 
-  link.addEventListener('mouseleave', () => {
+  if (window.innerWidth > 1000) {
 
-    navLinks.forEach(otherLink => {
-      otherLink.style.opacity = 1;
+    navLinks.forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        navLinks.forEach((otherLink) => {
+          otherLink.style.opacity = 0.5;
+        });
+        link.style.opacity = 1;
+      });
+
+      link.addEventListener("mouseleave", () => {
+        navLinks.forEach((otherLink) => {
+          otherLink.style.opacity = 1;
+        });
+      });
     });
-  });
-});
+  }
+}
+
+navHover();
+
+window.addEventListener("resize", navHover);

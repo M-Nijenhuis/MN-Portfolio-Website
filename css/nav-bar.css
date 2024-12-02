@@ -32,11 +32,7 @@ nav div {
   cursor: pointer;
   padding: 0 35px;
   margin: auto 0;
-  transition: opacity 300ms ease;
-}
-
-#not-change {
-  opacity: 1;
+  transition: opacity 200ms ease;
 }
 
 .active-tab {
@@ -66,9 +62,6 @@ nav div a:first-child {
   animation-name: sidebarOpen;
   animation-duration: 0.7s;
   animation-iteration-count: 1;
-}
-.sidebar a img {
-  opacity: 1;
 }
 
 @keyframes sidebarOpen {
