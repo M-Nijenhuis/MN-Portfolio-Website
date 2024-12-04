@@ -83,6 +83,7 @@ body {
 
 .inputs-container textarea {
   box-sizing: border-box;
+  height: auto;
   width: 100%;
   color: white;
   background-color: rgba(0, 0, 0, 0);
@@ -116,7 +117,6 @@ body {
   padding: 15px;
   transition: all 0.2s;
   margin: 100px 0;
-  margin-bottom: 50px;
 }
 .btn:hover {
   cursor: pointer;
