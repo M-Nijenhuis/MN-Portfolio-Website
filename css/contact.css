@@ -6,6 +6,15 @@ body {
   color: white;
 }
 
+::-moz-selection { /* Code for Firefox */
+  background-color: #ce0f0f;
+}
+
+::selection {
+  color: white;
+  background-color: #ce0f0f;
+}
+
 .content-container {
   width: 90%;
   height: max-content;
@@ -75,7 +84,6 @@ body {
 .inputs-container textarea {
   box-sizing: border-box;
   width: 100%;
-  height: 80px;
   color: white;
   background-color: rgba(0, 0, 0, 0);
   border: none;

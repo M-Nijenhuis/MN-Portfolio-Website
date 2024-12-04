@@ -6,6 +6,14 @@ body {
   color: white;
 }
 
+::-moz-selection { /* Code for Firefox */
+  background-color: #ce0f0f;
+}
+
+::selection {
+  color: white;
+  background-color: #ce0f0f;
+}
 
 .about-me-text-container {
   width: 60%;
