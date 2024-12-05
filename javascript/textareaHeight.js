@@ -2,8 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const textareas = document.querySelectorAll("textarea");
 
   textareas.forEach((textarea) => {
-    textarea.addEventListener("input", (event) => {
-      // if there is input then the height style is set to auto + the content
+    // Stel een standaardhoogte in
+    textarea.style.height = "80px";
+    
+    // Pas de hoogte aan op basis van de inhoud
+    textarea.style.height = textarea.scrollHeight + "px";
+
+    // Zorg dat de hoogte dynamisch blijft bij invoer
+    textarea.addEventListener("input", () => {
       textarea.style.height = "auto";
       textarea.style.height = textarea.scrollHeight + "px";
     });
