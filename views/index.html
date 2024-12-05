@@ -13,17 +13,6 @@
   <link href="../css/footer.css" rel="stylesheet" />
 </head>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const scripts = document.querySelectorAll('script[src]');
-    scripts.forEach((script) => {
-      const src = script.getAttribute('src');
-      const cacheBustedSrc = `${src}${src.includes('?') ? '&' : '?'}v=${Date.now()}`;
-      script.setAttribute('src', cacheBustedSrc);
-    });
-  });
-</script>
-
 <body>
 
 
@@ -97,19 +86,17 @@
 
   <footer>
     <div class="flex-container">
-      <a href="https://github.com/m-nijenhuis" target="_blank"><img src="../images/github-icon-2.svg"
-          alt="github logo"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="../images/linkedin-app-white-icon.webp"
-          alt="linkedin logo"></a>
+      <a href="https://github.com/m-nijenhuis" target="_blank"><img src="../images/github-icon-2.svg" alt="github logo"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="../images/linkedin-app-white-icon.webp" alt="linkedin logo"></a>
     </div>
     <p>©Michiel Nijenhuis</p>
   </footer>
 
 
-  <script src="../javascript/index.js"></script>
-  <script src="../javascript/sidebar.js?ts=<?= time() ?>"></script>
-  <script src="../javascript/navbarHover.js?ts=<?= time() ?>"></script>
-  <script src="../javascript/updateCss.js?ts=<?= time() ?>"></script>
+  <script asp-append-version="true" src="../javascript/index.js"></script>
+  <script asp-append-version="true" src="../javascript/sidebar.js"></script>
+  <script asp-append-version="true" src="../javascript/navbarHover.js"></script>
+  <script asp-append-version="true" src="../javascript/updateCss.js"></script>
 </body>
 
 </html

@@ -11,18 +11,6 @@
   <link href="../css/footer.css" rel="stylesheet" />
 </head>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const scripts = document.querySelectorAll('script[src]');
-    scripts.forEach((script) => {
-      const src = script.getAttribute('src');
-      const cacheBustedSrc = `${src}${src.includes('?') ? '&' : '?'}v=${Date.now()}`;
-      script.setAttribute('src', cacheBustedSrc);
-    });
-  });
-</script>
-
 <body>
   <div id="page-container">
     <nav>
@@ -90,11 +78,11 @@
     </footer>
   </div>
 
-  <script src="../javascript/sidebar.js"></script>
-  <script src="../javascript/scroll.js"></script>
-  <script src="../javascript/navbarHover.js"></script>
-  <script src="../javascript/updateCss.js"></script>
-  <script src="../javascript/pageContentScan.js"></script>
+  <script asp-append-version="true" src="../javascript/sidebar.js"></script>
+  <script asp-append-version="true" src="../javascript/scroll.js"></script>
+  <script asp-append-version="true" src="../javascript/navbarHover.js"></script>
+  <script asp-append-version="true" src="../javascript/updateCss.js"></script>
+  <script asp-append-version="true" src="../javascript/pageContentScan.js"></script>
 </body>
 
 </html>

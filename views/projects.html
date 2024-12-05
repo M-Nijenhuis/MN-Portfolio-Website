@@ -11,17 +11,6 @@
   <link href="../css/projects.css" rel="stylesheet" />
 </head>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const scripts = document.querySelectorAll('script[src]');
-    scripts.forEach((script) => {
-      const src = script.getAttribute('src');
-      const cacheBustedSrc = `${src}${src.includes('?') ? '&' : '?'}v=${Date.now()}`;
-      script.setAttribute('src', cacheBustedSrc);
-    });
-  });
-</script>
-
 <body>
   <nav>
     <div class="sidebar">
@@ -126,9 +115,9 @@
     <p>©Michiel Nijenhuis</p>
   </footer>
 
-  <script src="../javascript/sidebar.js"></script>
-  <script src="../javascript/navbarHover.js"></script>
-  <script src="../javascript/updateCss.js"></script>
+  <script asp-append-version="true" src="../javascript/sidebar.js"></script>
+  <script asp-append-version="true" src="../javascript/navbarHover.js"></script>
+  <script asp-append-version="true" src="../javascript/updateCss.js"></script>
 </body>
 
 </html>
