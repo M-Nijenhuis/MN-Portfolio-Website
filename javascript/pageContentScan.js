@@ -20,7 +20,7 @@ function checkIfScrollingIsNeeded() {
 
       footer.classList.add("one-page-footer");
     }
-  }, 60);
+  }, 100);
 }
 
 // This function checks if the page changes width and if it does it calls the check if scrolling needed function
